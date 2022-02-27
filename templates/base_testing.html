@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+{#<link rel="stylesheet" type="text/css" href="/static/styles/styles.css">#}
+<link rel="stylesheet" type="text/css" href="/static/styles/testing.css">
+{#<link rel="stylesheet" type="text/css" href="/static/styles/main.css">#}
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>{% block title %}{% endblock %}</title>
+<body>
+    <div class = "common-testing-container">
+        <header>
+            <div>
+                <b><h3 class="title">{{ session['fio'] }}</h3>
+                <h4 class="title_2">{{ res_value('NUM_ORDER') }}: &nbsp{{ num_order }}</h4></b>
+                <h4 class="title_2">{{ theme_name }}</h4>
+            </div>
+            <div style="padding: 10px;">
+                {%for i in range(1, count_question + 1) %}
+                    {% if i == order_num_question %}
+                        <button class="bt_current_question">
+                        <a class="bt_current_question" href='/testing/jump_to_question/{{ i }}'>{{ i }}</a>
+                    {% elif i in g.user.list_answer %}
+                        <button class="bt_answered">
+                        <a class="bt_answered" href='/testing/jump_to_question/{{ i }}'>{{ i }}</a>
+                    {% else %}
+                        <button class="bt_list_question">
+                         <a class="bt_list_question" href='/testing/jump_to_question/{{ i }}'>{{ i }}</a>
+                    {% endif %}
+                        </button>
+                {%endfor%}
+            </div>
+             {% block timer_area %}{% endblock %}
+        </header>
+        <main_zone>
+            <div style="border-right: 1px; border-bottom-color: black;">
+                {% block quest %}{% endblock %}
+            </div>
+            <div style="margin-left: 25px; margin-top: 15px">
+                {% block answer %}{% endblock %}
+                <br><br>
+                <div class="all_command">
+                     {% block all_command %}{% endblock %}
+                </div>
+            </div>
+        </main_zone>
+    </div>
+</body>
+
+</html>
