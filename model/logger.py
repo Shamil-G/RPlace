@@ -1,10 +1,10 @@
 import logging
 import logging.config
-from main_config import cfg
+import app_config as cfg
 
 
 def init_logger():
-    logger = logging.getLogger('PDD')
+    logger = logging.getLogger('RPLACE')
     # logging.getLogger('PDD').addHandler(logging.StreamHandler(sys.stdout))
     # Console
     logging.getLogger('PDD').addHandler(logging.StreamHandler())

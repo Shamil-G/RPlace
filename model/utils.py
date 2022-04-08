@@ -1,5 +1,5 @@
 from main_app import app, log
-from main_config import cfg
+import app_config as cfg
 from view.i18n import i18n
 from db_oracle.connect import get_connection
 from flask import send_from_directory, session, redirect, url_for, request
@@ -103,9 +103,5 @@ def print_memory(fn):
                       )
     return wrapper
 
-
-@app.route("/test")
-def test():
-    start_thread('/checkImage')
 
 

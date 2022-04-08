@@ -10,6 +10,7 @@ html, body {
     color: var(--base-color-text);
     text-align: left;
     font-family: Calibri, sans-serif;
+    overflow-x: hidden; /* Disable horizontal scroll */
     /*background-image: url(mathematics.jpg);*/
 }
 .el_center{
@@ -24,33 +25,100 @@ html, body {
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
+.request-number-label {
+    color: black;
+}
 .request-number {
     margin-top: 16px;
     width: 384px;
     height: 53px;
     border-radius: 20px;
-    /*border: none;*/
+    border: none;
     background-color: #FFFF;
     box-shadow: white;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 28px;
     text-align: center;
-    border-width: 1px;
+    /*border-width: 0px;*/
+}
+.number-order-label{
+    margin-top: 16px;
+    width: 720px;
+    height: 53px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FFFF;
+    box-shadow: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 36px;
+    color: black;
 }
  .button {
      background-color: rgba(0, 149, 81, 1);
      width: 540px;
-     height: 48px;
+     height: 54px;
      border-radius: 42px;
      border: none;
      color: white;
      margin-top: 1rem;
      font-size: 24px;
  }
- .button_text{
+  .button_text{
      color: white;
+ }
+ .info{
+     color: black;
+     font-size: 28px;
  }
  input:focus, textarea:focus, select:focus{
     outline: none;
+}
+.background {
+    position: absolute;
+    left: 23%;
+    top: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.background-blue {
+     position: absolute;
+     background: url('/static/images/first.svg');
+     width: 600px;
+     height: 600px;
+     background-repeat: no-repeat;
+     margin-top: -12rem;
+     z-index: -2;
+}
+.background-purple {
+    position: absolute;
+    background: url('/static/images/second.svg');
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    margin-left: 20rem;
+    margin-top: -12rem;
+    z-index: -1;
+}
+.background-orange {
+    position: absolute;
+    background: url('/static/images/third.svg');
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    margin-left: 20rem;
+    margin-top: 0rem;
+    z-index: -1;
+}
+.background-pink {
+    position: absolute;
+    background: url('/static/images/fourth.svg');
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    margin-left: 31rem;
+    margin-top: -5rem;
+    z-index: -1;
 }

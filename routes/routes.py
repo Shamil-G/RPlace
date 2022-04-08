@@ -1,10 +1,9 @@
 from flask import render_template, make_response
 from flask_login import login_required, logout_user
 from model.utils import *
-from model.model_login import *
 # from model.send_result import send_result_arm_go, send_failed_fc_acknowledgment
 from main_app import app, log
-from main_config import cfg
+import app_config as cfg
 import json
 import re
 # from random import randrange

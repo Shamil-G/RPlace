@@ -1,7 +1,7 @@
 from __init__ import app, log
+import app_config as cfg
 # Don't remove below lines. There are APP routes
 from view import routes
-from main_config import cfg
 
 
 if __name__ == "__main__":

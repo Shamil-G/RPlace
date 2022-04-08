@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="/static/styles/index.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="el_center">
+            <form  method="POST" class="text_center">
+                <div style="font-size: 28px;">
+                    <p class="number-order-label" >
+                        {{ res_value('NUM_ORDER') }}:&emsp;{{ num_order }}
+                    </p>
+                    <br>
+                    <p class="number-order-label" >
+                        {{ res_value('NUM_PLACE') }}:&emsp;{{ place_num }}
+                    </p>
+                    <br>
+                    <br>
+                    <p class="number-order-label" >
+                        {{ res_value('VALID_PERIOD') }}
+                    </p>
+                </div>
+                <br>
+                <div>
+                    <button class="button" type="submit"
+                            autofocus
+                            style="border:none; outline: 0;">
+                        {{ res_value('EXIT') }}</button>
+                </div>
+                <br>
+                <div>
+                    {% if info %}
+                        <h3>{{ info }}</h3>
+                    {% endif %}
+                </div>
+            </form>
+    </div>
+</body>
+</html>

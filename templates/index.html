@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<body>
+    <div class="background">
+        <div class="background-blue"></div>
+        <div class="background-purple"></div>
+        <div class="background-orange"></div>
+        <div class="background-pink"></div>
+    </div>
+
     <div class="el_center">
             <form  method="POST" class="text_center">
                 <div style="font-size: 28px;">
@@ -24,9 +32,10 @@
                     <button class="button" type="submit">{{ res_value('ENTER') }}</button>
                 </div>
                 <br>
+                <br>
                 <div>
                     {% if info %}
-                        <h3>{{ info }}</h3>
+                        <h1 class="info">{{ info }}</h1>
                     {% endif %}
                 </div>
             </form>
